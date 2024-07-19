@@ -1,12 +1,12 @@
-export default function RootLayout({
+export default function AboutUsLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <body>
+    <div>
       {children}
-      hi
-    </body>
+      &copy; Next JS is great!
+    </div>
   );
 }
