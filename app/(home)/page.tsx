@@ -13,6 +13,8 @@ async function getMovie() {
   return json;
 }
 
+console.log("test");
+
 export default async function HomePage() {
   const movies = await getMovie();
   return (
