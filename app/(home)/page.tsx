@@ -6,17 +6,14 @@ export const metadata = {
   title: "Home",
 };
 
-async function getMovie() {
-  await new Promise((resolve) => setTimeout(resolve, 2000));
+async function getMovies() {
   const response = await fetch(API_URL);
   const json = await response.json();
   return json;
 }
 
-console.log("test");
-
 export default async function HomePage() {
-  const movies = await getMovie();
+  const movies = await getMovies();
   return (
     <div className={styles.container}>
       {movies.map((movie) => (
@@ -30,3 +27,5 @@ export default async function HomePage() {
     </div>
   );
 }
+
+export const runtime = "edge";
